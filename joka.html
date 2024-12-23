@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조카세요?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            overflow: hidden;
+        }
+        .message {
+            font-size: 2rem;
+            color: #333;
+            margin: 10px;
+            animation: fadeInOut 2s infinite;
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">조카세요?</div>
+    <script>
+        const createMessage = () => {
+            const newMessage = document.createElement('div');
+            newMessage.className = 'message';
+            newMessage.textContent = '조카세요?';
+            document.body.appendChild(newMessage);
+        };
+
+        setInterval(createMessage, 500);
+    </script>
+</body>
+</html>
